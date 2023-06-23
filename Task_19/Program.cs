@@ -39,34 +39,16 @@ Palindrome();
 
 
 
-/*Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-A (3,6,8); B (2,1,-7), -> 15.84
-A (7,-5, 0); B (1,-1,9) -> 11.53
-
-
-Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-3 -> 1, 8, 27
-5 -> 1, 8, 27, 64, 125*/
 
 
 
 
 
-/*int InputX(string message)
-{
-    System.Console.Write(message);
-    int X = Convert.ToInt32(Console.ReadLine());
-    return X;
-}
 
-int InputY(string message)
-{
-    System.Console.Write(message);
-    int Y = Convert.ToInt32(Console.ReadLine());
-    return Y;
-}
 
-int x = */
+
+
+
 
 
 
