@@ -2,39 +2,27 @@
 A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53*/
 
-Random rand = new Random();
-string random;
-string number = "";
-string[] List = new string[5];
-for(int i = 0; i < List.Length; i++)
+int Coordinate(string coorName, string pointName)
 {
-    random = Convert.ToString(rand.Next(0, 10));
-    List[i] = random;
-    number += List[i];
+    Console.Write($"Enter the coordinate {coorName} of point {pointName}: ");
+    return Convert.ToInt32(Console.ReadLine());
 }
 
-System.Console.WriteLine($"Пятизначное число: {number}");
-if(List[0] == List[4] && List[1] == List[3]) System.Console.WriteLine("Это число палиндром");
-else System.Console.WriteLine("Это число не палиндром");
+int x1 = Coordinate("x", "A");
+int y1 = Coordinate("y", "A");
+int z1 = Coordinate("z", "A");
+int x2 = Coordinate("x", "B");
+int y2 = Coordinate("y", "B");
+int z2 = Coordinate("z", "B");
 
-string InPut(string message)
+double Decision(double x1, double x2, double y1, double y2, double z1, double z2)
 {
-    System.Console.WriteLine(message);
-    string number = System.Console.ReadLine();
-    return number;
+  return Math.Sqrt(Math.Pow((x2-x1), 2) + Math.Pow((y2-y1), 2) + Math.Pow((z2-z1), 2));
 }
 
-string list = InPut("Enter a five-digit number: ");
+double segmentLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
 
-void Palindrome()
-{
-    if(list[0] == list[4] && list[1] == list[3]) System.Console.WriteLine("Это число палиндром");
-    else System.Console.WriteLine("Это число не палиндром");
-}
-Palindrome();
-
-
-
+Console.WriteLine($"Length of the segment  {segmentLength}");
 
 
 
